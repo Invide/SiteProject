@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" >
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="../static/content/style.css" />
+    <script src="../static/scripts/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="topnavTitle">
+                <a href="{{ url_for('index') }}">САЙТ О КОМПЬЮТЕРАХ</a>
+            </div>
+            <div class="topnav" id="header">
+                <a href="{{ url_for('history') }}">ИСТОРИЯ РАЗВИТИЯ ЭВМ</a>
+                <a href="{{ url_for('components') }}">КОМПЛЕКТУЮЩИЕ ПК</a>
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <div class="page">
+        <div class="staticbox">
+            <h1>Краткая информация о сайте</h1>
+            <div class="content">
+                Сайт создан для школьного проекта и представляет собой портал для ознакомления с устройством компьютера.<br />
+                Ссылки для обратной связи:<br>
+                email: makscoroleow@yandex.ru<br>
+                VK: <a href="https://vk.com/iinvide">https://vk.com/iinvide</a>
+            </div>
+        </div>
+        <div class="contentbox">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html> 
